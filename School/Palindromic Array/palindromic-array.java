@@ -26,15 +26,15 @@ class GfG
                   //add code here.
                   for(int i=0;i<n;i++){
                       int sum=0;
-                      int temp,r;
+                      int r;
                       int f=a[i];
-                      temp=f;
+                    
                       while(f>0){
                            r=f%10;
                            sum=(sum*10)+r;    
                            f=f/10;    
                       }
-                      if(temp!=sum){
+                      if(a[i]!=sum){
                           return 0;
                       }
                   }
