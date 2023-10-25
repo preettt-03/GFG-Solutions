@@ -53,10 +53,17 @@ class Complete{
         //Complete the function
         int s1=0;
         int s2=0;
-        for(int i=0;i<n/2;i++){
+        int k=0;
+         if(n%2==0){
+             k=n/2;
+         }
+        else{
+          k = (n-1)/2;
+        }
+        for(int i=0;i<k;i++){
             s1+=arr[i];
         }
-        for(int i=n/2;i<n;i++){
+        for(int i=k;i<n;i++){
             s2+=arr[i];
         }
         return s1*s2;
