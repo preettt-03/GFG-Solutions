@@ -34,7 +34,8 @@ class GfG
        int m=s.length();
        int n=x.length();
        for(int i=0;i<=m-n;i++){
-           if(s.substring(i,i+n).equals(x)){
+           String str=s.substring(i,i+n);
+           if(str.equals(x)){
                return i;
            }
        }
