@@ -30,12 +30,12 @@ class Solution
     public long reverse_digit(long n)
     {
         // Code here
-        long count=0;
+        long num=0;
         while(n>0){
-            long s=n%10;
-                count = count*10+s;
-            n/=10;
+            long d=n%10;
+            num=(num*10)+d;
+            n=n/10;
         }
-        return count;
+        return num;
     }
 }
