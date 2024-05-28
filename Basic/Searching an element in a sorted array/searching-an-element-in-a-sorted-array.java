@@ -41,19 +41,13 @@ class Solution{
     {
         
         // Your code here
-        int s=0;
-        int e=N-1;
-        while(s<=e){
-            int mid=(s+e)/2;
-            if(K==arr[mid]){
+        for(int i=0;i<N;i++){
+            if(arr[i]==K){
                 return 1;
             }
-            else if(K>arr[mid]){
-                s=mid+1;
-            }else{
-                  e=mid-1;
-            }
         }
+        
         return -1;
+        
     }
 }
