@@ -16,7 +16,9 @@ class GFG
             Solution ob = new Solution();
             String ans = ob.is_palindrome(n);
             System.out.println(ans);
-        }
+        
+System.out.println("~");
+}
     }
 }
 
@@ -31,16 +33,13 @@ class Solution
     public String is_palindrome(int n)
     {
         // Code here
-        int N=n;
-        int a=0;
-        while(n>0){
-            int d=n%10;
-            a=a*10+d;
-            n=n/10;
+        String s=""+n;
+        
+        for(int i=0;i<s.length()/2;i++){
+            if(s.charAt(i)!=s.charAt(s.length()-i-1)){
+                return "No";
+            }
         }
-        if(a==N){
-            return "Yes";
-        }
-        return "No";
+        return "Yes";
     }
 }
